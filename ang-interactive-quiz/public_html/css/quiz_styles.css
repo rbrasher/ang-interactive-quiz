@@ -221,7 +221,8 @@ body {background: #fff; padding: 20px;}
     width: 500px;
     position: absolute;
     top: 225px;
-    left: 660px;
+    /*left: 660px;*/
+    left: 700px;
 }
 
 #myQuiz .results .share {

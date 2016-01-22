@@ -23,8 +23,19 @@
     <div class="question {{ ($index === activeQuestion) ? 'active' : 'inactive' }} {{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}" ng-repeat="myQuestion in myQuestions">
         <p>{{questionState}}</p>
         <p class="txt">{{myQuestion.question}}</p>
-        <p class="ans" ng-repeat="Answer in myQuestion[$index].answers" ng-click="selectAnswer($parent.$index, $index)" ng-class="{ 'image' : Answer.image, selected:isSelected($parent.$index, $index), correct:isCorrect($parent.$index, $index)}" ng-style="{'background-image': 'url({{Answer.image}})'}">{{Answer.text}}</p>
-    
+        <p class="ans"
+					ng-repeat="Answer in myQuestions[$index].answers"
+					ng-click="selectAnswer($parent.$index,$index)"
+					ng-class="{ 'image' : Answer.image,
+						selected:isSelected($parent.$index,$index),
+						correct:isCorrect($parent.$index,$index)}"
+					ng-style="{'background-image':'url({{Answer.image}})'}"
+					>{{Answer.text}}</p>
+        
+        <!--
+        <p class="ans" ng-repeat="Answer in myQuestions[$index].answers" ng-click="selectAnswer($parent.$index, $index)" ng-class="{ 'image' : Answer.image, selected:isSelected($parent.$index, $index), correct:isCorrect($parent.$index, $index)}" ng-style="{'background-image': 'url({{Answer.image}})'}">{{Answer.text}}</p>
+        -->
+        
         <div class='feedback'>
             <p ng-show="myQuestion.correctness === 'correct'">You are <strong>correct</strong>.</p>
             <p ng-show="myQuestion.correctness === 'incorrect'">Oops! That is not correct.</p>

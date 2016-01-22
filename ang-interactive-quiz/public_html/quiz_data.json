@@ -12,10 +12,10 @@
     {
         "question" : "Which image shows a close up of Saturn?",
         "answers" : [
-            {"id": 0, "text": "images/close_up_01.jpg"},
-            {"id": 1, "text": "images/close_up_02.jpg"},
-            {"id": 2, "text": "images/close_up_03.jpg"},
-            {"id": 3, "text": "images/close_up_04.jpg"}
+            {"id": 0, "image": "images/close_up_01.jpg"},
+            {"id": 1, "image": "images/close_up_02.jpg"},
+            {"id": 2, "image": "images/close_up_03.jpg"},
+            {"id": 3, "image": "images/close_up_04.jpg"}
         ],
         "correct": 3
     },
